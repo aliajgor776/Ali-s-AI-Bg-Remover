@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ali's AI — Background Remover</title>
+<meta name="description" content="Remove photo backgrounds locally in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo"><i></i>Ali's <b>AI</b></div><div class="privacy">🔒 Your photo stays on your device</div></header>
+
+  <section class="hero">
+    <span class="tag">AI PHOTO TOOL</span>
+    <h1>Remove backgrounds.<br><em>Keep the quality.</em></h1>
+    <p>Remove the background from product photos, portraits and more. The output keeps the source image dimensions and is saved as a transparent PNG.</p>
+
+    <div id="drop" class="drop">
+      <input id="file" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+      <div class="up">↑</div>
+      <h2>Drop your image here</h2>
+      <div class="muted">or click to choose a photo</div>
+      <button id="choose">Choose Photo</button>
+      <small>JPG · PNG · WebP · Max 20 MB</small>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="result" class="result">
+      <div class="card">
+        <div class="cardhead"><b>Original</b><span id="ometa"></span></div>
+        <div class="preview"><img id="orig" alt="Original"></div>
+      </div>
+      <div class="arr">→</div>
+      <div class="card">
+        <div class="cardhead"><b>Background removed</b><span id="rmeta"></span></div>
+        <div class="preview checker"><img id="out" alt="Result"></div>
+        <button id="download" class="download">Download transparent PNG ↓</button>
+      </div>
+    </div>
+
+    <div class="quality">✨ <b>Quality-first export:</b> original pixel dimensions are preserved; no JPEG recompression is applied.</div>
+  </section>
+  <footer>Ali's AI · Browser-based processing</footer>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
